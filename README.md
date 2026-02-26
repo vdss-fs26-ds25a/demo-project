@@ -110,9 +110,9 @@ uv run quarto render
 
 1. Make changes to the `.qmd` source files in the `docs` folder
 2. Make sure the project Python environment is activated (see Python environment setup and management)
-2. Preview locally: `quarto preview` from the `docs` folder
-3. Build the documentation website: `uv run quarto render` from the `docs` folder. This renders to `docs/build`
-4. Check the website locally by opening `docs/build/index.html` in a browser
+3. Preview locally: `quarto preview` from the `docs` folder
+4. Build the documentation website: `uv run quarto render` from the `docs` folder. This renders to `docs/build`
+5. Check the website locally by opening `docs/build/index.html` in a browser
 
 ### Deployment of the Documentation to GitHub Pages
 
@@ -127,12 +127,9 @@ The setting `execute: freeze: auto` in `_quarto.yml` ensures that Python computa
    ```bash
    cd docs && uv run quarto render
    ```
-3. Commit the `_freeze` directory and the workflow file, then push to `main`:
-   ```bash
-   git add .github/workflows/publish.yml docs/_freeze
-   git commit -m "Add GitHub Pages deployment workflow"
-   git push
-   ```
+3. Push the changes to `main`
+
+The `_freeze` directory and the workflow file `.github/workflows/publish.yml` should already be tracked in the repository.
 
 #### Publishing Updates
 
@@ -140,10 +137,4 @@ The setting `execute: freeze: auto` in `_quarto.yml` ensures that Python computa
 2. Check the website locally by opening `docs/build/index.html`
 3. Commit and push all updated files (including `docs/_freeze`) to `main`. The GitHub Actions workflow will render and deploy the site automatically
 
-Rendering `svg` files requires the `librsvg` package. The GitHub Actions workflow installs it automatically. To render locally, install it on your system: on macOS via `brew install librsvg`, on Windows via `choco install rsvg-convert`.
 
-
-## Further Information
-* "About Readmes" on Github
-https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes
-* [Python Dev Guide](refs/python_dev_guide.md)
