@@ -1,5 +1,5 @@
 # Evaluation Report
-This report documents the systematic evaluation of the visualization prototype developed in the [Visual Encoding and Design](viz_encoding_design.qmd) phase against the project objectives and success criteria defined in the [Project Charta](project_charta.qmd).
+This report documents the systematic evaluation of the visualization prototype developed in the [Visual Encoding and Design](viz_design_report.qmd) phase against the project objectives and success criteria defined in the [Project Charta](project_charta.qmd).
 
 ## Evaluation Setup
 
